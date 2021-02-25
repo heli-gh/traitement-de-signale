@@ -1,16 +1,0 @@
---2021-02-07 19:21:09--  https://downloads.sourceforge.net/project/octave/Octave%20Forge%20Packages/Individual%20Package%20Releases/image-2.6.1.tar.gz?r=
-Résolution de downloads.sourceforge.net (downloads.sourceforge.net)… 216.105.38.13
-Connexion à downloads.sourceforge.net (downloads.sourceforge.net)|216.105.38.13|:443… connecté.
-requête HTTP transmise, en attente de la réponse… 302 Found
-Emplacement : https://altushost-swe.dl.sourceforge.net/project/octave/Octave%20Forge%20Packages/Individual%20Package%20Releases/image-2.6.1.tar.gz [suivant]
---2021-02-07 19:21:10--  https://altushost-swe.dl.sourceforge.net/project/octave/Octave%20Forge%20Packages/Individual%20Package%20Releases/image-2.6.1.tar.gz
-Résolution de altushost-swe.dl.sourceforge.net (altushost-swe.dl.sourceforge.net)… 79.142.76.130
-Connexion à altushost-swe.dl.sourceforge.net (altushost-swe.dl.sourceforge.net)|79.142.76.130|:443… connecté.
-requête HTTP transmise, en attente de la réponse… 200 OK
-Taille : 368442 (360K) [application/x-gzip]
-Enregistre : «image-2.6.1.tar.gz?r=»
-
-image-2.6.1.tar.gz?   0%[                    ]       0  --.-KB/s               image-2.6.1.tar.gz?  64%[===========>        ] 231,77K  1,11MB/s               image-2.6.1.tar.gz? 100%[===================>] 359,81K  1,45MB/s    ds 0,2s    
-
-2021-02-07 19:21:10 (1,45 MB/s) - «image-2.6.1.tar.gz?r=» enregistré [368442/368442]
-
