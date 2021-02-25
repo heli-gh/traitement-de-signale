@@ -2,7 +2,7 @@
 
 #            Convolution et Corrélation des signales
 
-##                                          ----Traitement du signale en matlab
+##                                                                                ---Traitement du signale en matlab
 
 ​                                                                                                                Hengshuo LI , Ruidong PAN
 
@@ -36,9 +36,9 @@ Maintenant nous utilisons Matlab pour vérier notre résultat:
 
 ### Exemple: 
 
-on prend un signale sinusoÏde $cos(wt) w=$ , cet fonction est bien vérifie la condition pair et réel, donc on peut dire que sa auto-corrélation et auto-convolution sont identiques par théoème. nous  le vérifions à l'aide de octave 
+on prend un signale sinusoÏde $cos(wt) \quad w=0.05$ , cet fonction est bien vérifie la condition pair et réel, donc on peut dire que sa auto-corrélation et auto-convolution sont identiques par théoème. nous  le vérifions à l'aide de octave 
 
-#### **code**:[simulation de x(t) ,sa auto-convolution et auto-corrélation ]()
+**code**:[simulation de x(t) ,sa auto-convolution et auto-corrélation ](https://github.com/heli-gh/traitement-de-signale.git)
 
 **et nous obtetons la résultat suivant:**
 
@@ -142,7 +142,7 @@ on prends un signale très générale $f(t)=exp(jwt) \quad w=400\pi \quad t\in [
 
 ![](https://i.loli.net/2021/02/26/GSN87UrOlVo9ABm.png)
 
-**code**:[parite réelle cos et parite imaginaire sin]()
+**code**:[parite réelle cos et parite imaginaire sin](https://github.com/heli-gh/traitement-de-signale.git)
 
 nous trouvons la résultat est bien vérifie, $R_y =y(\tau)*y(\tau)(t) $
 
@@ -154,7 +154,7 @@ nous le simulons dans octave, et graphe est ci-desous :
 
 ![](https://i.loli.net/2021/02/26/oVGdRAHurDB6Jmq.png) 
 
-**code**:[parite réelle sin et parite imaginaire cos]()
+**code**:[parite réelle sin et parite imaginaire cos](https://github.com/heli-gh/traitement-de-signale.git)
 
 ces graphes sont un peu difficile à observer, mais lorsque vous les comparez soigneusement , tu doit se rendre compte que la opposées de auto-covolution et auto-corrélation sont identique, qui vérifie la propostion on trouve.  
 
@@ -162,7 +162,7 @@ ces graphes sont un peu difficile à observer, mais lorsque vous les comparez so
 
 Dans ce cas la, on veut prend d'autre fonction complex aléatoire mais bien vérifie la condition que la partie réelle est paire et parite imaginaire est imapire. par example : $f(t)= rect_{8\pi/w}(t)+jsin(wt)\quad w=400\pi\quad t\in[-8\pi/w,8\pi/w]$
 
-**code**:[parite réelle rectrangle et parite imaginaire sin]()
+**code**:[parite réelle rectrangle et parite imaginaire sin](https://github.com/heli-gh/traitement-de-signale.git)
 
 la graphe est ci-desous:
 
@@ -178,7 +178,7 @@ quand même on construite un cas contôle avec Exemple3:
 
 dont partie réelle est impaire et partie imaginaire est paire.
 
-**code**:[partie réelle sin et partie imaginaire rectangle ]()
+**code**:[partie réelle sin et partie imaginaire rectangle ](https://github.com/heli-gh/traitement-de-signale.git)
 
 la graphe est ci-desous:
 
@@ -247,7 +247,7 @@ g(t)=cos(2wt)+sin(3wt)+j(cos(wt)+sin(2wt)+sin(4wt))$
 
 alors nous vérifions $ R_{fg}(t)=R^*_{gf}(-t)$
 
-**code en matlab**:[corrélation conjugées 1]()
+**code en matlab**:[corrélation conjugées 1](https://github.com/heli-gh/traitement-de-signale.git)
 
 **image**:![](https://i.loli.net/2021/02/26/SHXRojOpsUlAJBy.png)
 
@@ -261,7 +261,7 @@ pour $w=400\pi\quad t\in[-8\pi/w,8\pi/w]$
 
 $f=sinc(wt)+cos(wt)+j(cos(4wt)+cos(3wt)+sin(4wt))\quad g=cos(2wt)+sin(4wt)+j(cos(wt)+sin(4wt)+sinc(wt))$
 
-**code en matlab**[corrélation conjugées 2]()
+**code en matlab**[corrélation conjugées 2](https://github.com/heli-gh/traitement-de-signale.git)
 
 **image**:![](https://i.loli.net/2021/02/26/O2bJgSkABHXd9Fq.png)
 
