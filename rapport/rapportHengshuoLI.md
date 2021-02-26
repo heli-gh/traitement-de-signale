@@ -1,10 +1,10 @@
 
 
-#            Convolution et Corrélation des signales
+#            Convolution et Corrélation des signaux
 
-##                                                                                ---Traitement du signale en matlab
+##                                                                                ---Traitement du signal en matlab
 
-​                                                                                                                Hengshuo LI , Ruidong PAN
+​                                                                                   Hengshuo LI , Ruidong PAN
 
 
 
@@ -22,21 +22,21 @@ Pour que nous puisson mieux comprendre les  conculsions, nous utiliserons Matlab
 
 
 
-## Partie 1 (signale réel pair)
+## Partie 1 (signal réel pair)
 
 ### Preuve:
 
-Si x(t) est pair alors: $x(t)=x(-t)$, si $x(t)$ est réel alors:$ x(t)=x^{*}(t)$
+Si x(t) est pair alors: $x(t)=x(-t)$, si $x(t)$ est réel alors: $ x(t)=x^{*}(t)$
 
-Calculer la corrélation :$ R_{x}(\tau)=\int_{-\infty}^{\infty}x(t)x(t-\tau)dt=\int_{-\infty}^{\infty}x(t)x(\tau-t)dt$
+Calculer la corrélation : $ R_{x}(\tau)=\int_{-\infty}^{\infty}x(t)x(t-\tau)dt=\int_{-\infty}^{\infty}x(t)x(\tau-t)dt$
 
-Calculer le produit de convolution:$x(t)*x(t)=\int_{-\infty}^{\infty}x(\tau)x(t-\tau)d\tau $ Donc nous pouvons conclure que si $\tau=t$, alors $R_{x}(\tau)=x(t)*x(t)$
+Calculer le produit de convolution: $x(t)*x(t)=\int_{-\infty}^{\infty}x(\tau)x(t-\tau)d\tau $ . Donc nous pouvons conclure que si $\tau=t$, alors $R_{x}(\tau)=x(t)*x(t)$.
 
-Maintenant nous utilisons Matlab pour vérier notre résultat:
+Ensuit nous utilisons Matlab pour vérifier notre résultat.
 
 ### Exemple: 
 
-on prend un signale sinusoÏde $cos(wt) \quad w=0.05$ , cet fonction est bien vérifie la condition pair et réel, donc on peut dire que sa auto-corrélation et auto-convolution sont identiques par théoème. nous  le vérifions à l'aide de octave 
+On prend un signal sinusoÏde $cos(wt) \quad w=0.05$ , cette fonction a bien vérifié la condition paire et réelle, donc on peut dire que sa auto-corrélation et auto-convolution sont identiques par la théoème. Nous le vérifions à l'aide de Matlab. 
 
 **code**:[simulation de x(t) ,sa auto-convolution et auto-corrélation ](https://github.com/heli-gh/traitement-de-signale.git)
 
@@ -44,13 +44,13 @@ on prend un signale sinusoÏde $cos(wt) \quad w=0.05$ , cet fonction est bien v�
 
 ![](https://i.loli.net/2021/02/26/qz9NUc8kx1fXdiZ.png)
 
-nous s'apercevons la graph 2 et 3 sont similaire, donc on peut conclure sa auto-convolution et auto-corrélation sont identique.
+Nous s'apercevons la graph 2 et 3 sont similaires, donc on peut conclure sa auto-convolution et auto-corrélation sont identiques.
 
 
 
-## Partie 2 (signale complexe)
+## Partie 2 (signal complexe)
 
-### comparer auto-corrélation et auto-convolution 
+### Comparer auto-corrélation et auto-convolution 
 
 #### preuve:
 
@@ -88,13 +88,13 @@ $$
 
 on suppose  $x(t)$ et $ y(t)$ sont réel.
 
-quand $x(t)$ est paire et réel, alors auto-convolution et auto-convolution de $x(t)$ sont identque; 
+quand $x(t)$ est pair et réel, alors auto-convolution et auto-convolution de $x(t)$ sont identques; 
 
-quand $x(t)$ est impaire et réel, alors auto-convolution et auto-convolution de $x(t)$ sont opposés;
+quand $x(t)$ est impair et réel, alors auto-convolution et auto-convolution de $x(t)$ sont opposés;
 
-quand $y(t)$ est paire et réel, alors cross-corrélation $R_{xy}(t) $  et convolution de $x(t)$ et $y(t) $ sont identique;
+quand $y(t)$ est pair et réel, alors cross-corrélation $R_{xy}(t) $  et convolution de $x(t)$ et $y(t) $ sont identiques;
 
-quand $y(t)$ est impaire et réel, alors cross-corrélation $R_{xy}(t) $  et convolution de $x(t)$ et $y(t) $ sont opposés;
+quand $y(t)$ est impair et réel, alors cross-corrélation $R_{xy}(t) $  et convolution de $x(t)$ et $y(t) $ sont opposés;
 $$
 \begin{eqnarray}
 R_x(t)&=&(x(\tau)*x(-\tau))(t)=(x(-\tau)*x(\tau))(t)=\int_{-\infty}^{+\infty}x(-\tau)x(t-\tau)d\tau\\
@@ -105,9 +105,9 @@ R_{xy}(t) &=&  x(\tau)*y(-\tau)(t)=\int_{-\infty}^{+\infty}y(-\tau)x(t-\tau)d\ta
 
 \end{eqnarray}
 $$
-Donc, quand partie rélle de x(t) est paire et partie imaginaire de x(t) est impaire, alors $R_x(t)$= $y(\tau)*y(\tau)$(t) ;
+Donc, quand partie réelle de x(t) est paire et partie imaginaire de x(t) est impaire, alors $R_x(t)$= $y(\tau)*y(\tau)$(t) ;
 
-quand partie rélle de x(t) est impaire et partie imaginaire de x(t) est paire, alors $R_x(t)$= $-y(\tau)*y(\tau)$(t) 
+quand partie réelle de x(t) est impaire et partie imaginaire de x(t) est paire, alors $R_x(t)$= $-y(\tau)*y(\tau)$(t) 
 
 
 
@@ -134,33 +134,33 @@ quand partie rélle de x(t) est impaire et partie imaginaire de x(t) est paire, 
 | impaire | paire   |                            | $\checkmark$               |
 | impaire | impaire |                            |                            |
 
-nous prénons des quatre signales différentes pour vérifie ce résultat.
+Nous prenons des quatre signaux différentes pour vérifier ce résultat.
 
 #### Exemple1:
 
-on prends un signale très générale $f(t)=exp(jwt) \quad w=400\pi \quad t\in [-2\pi/w,2\pi/w]$ partie réelle de la fonction est paire et la partie imaginaire est impaire on obtient la graphie à l'aide de octave ci -desous:
+On prend un signal très générale $f(t)=exp(jwt) \quad w=400\pi \quad t\in [-2\pi/w,2\pi/w]$ partie réelle de la fonction est paire et la partie imaginaire est impaire on obtient la graphie à l'aide de Matlab ci -desous:
 
 ![](https://i.loli.net/2021/02/26/GSN87UrOlVo9ABm.png)
 
 **code**:[parite réelle cos et parite imaginaire sin](https://github.com/heli-gh/traitement-de-signale.git)
 
-nous trouvons la résultat est bien vérifie, $R_y =y(\tau)*y(\tau)(t) $
+Nous trouvons le résultat est bien vérifié, $R_y =y(\tau)*y(\tau)(t) $
 
 #### Exemple2:
 
-on choisie une signale dont partie imaginaire est pair et partie réelle est impaire. $f(t)=sin(wt)+jcos(wt)\quad w=400\pi \quad t\in [-8\pi/w,8\pi/w]$
+On choisit un signal dont partie imaginaire est paire et partie réelle est impaire. $f(t)=sin(wt)+jcos(wt)\quad w=400\pi \quad t\in [-8\pi/w,8\pi/w]$
 
-nous le simulons dans octave, et graphe est ci-desous :
+nous le simulons dans Matlab, et graphe est ci-desous :
 
 ![](https://i.loli.net/2021/02/26/oVGdRAHurDB6Jmq.png) 
 
 **code**:[parite réelle sin et parite imaginaire cos](https://github.com/heli-gh/traitement-de-signale.git)
 
-ces graphes sont un peu difficile à observer, mais lorsque vous les comparez soigneusement , tu doit se rendre compte que la opposées de auto-covolution et auto-corrélation sont identique, qui vérifie la propostion on trouve.  
+Ces graphes sont un peu difficile à observer, mais lorsque vous les comparez soigneusement , vous devez se rendre compte que la opposées de auto-covolution et auto-corrélation sont identiques, qui vérifie la propostion on trouve.  
 
 #### Exemple3:
 
-Dans ce cas la, on veut prend d'autre fonction complex aléatoire mais bien vérifie la condition que la partie réelle est paire et parite imaginaire est imapire. par example : $f(t)= rect_{8\pi/w}(t)+jsin(wt)\quad w=400\pi\quad t\in[-8\pi/w,8\pi/w]$
+Dans ce cas là, on veut prendretu d'autre fonction complex aléatoire mais bien vérifie la condition que la partie réelle est paire et la parite imaginaire est imapire. par example : $f(t)= rect_{8\pi/w}(t)+jsin(wt)\quad w=400\pi\quad t\in[-8\pi/w,8\pi/w]$
 
 **code**:[parite réelle rectrangle et parite imaginaire sin](https://github.com/heli-gh/traitement-de-signale.git)
 
@@ -168,11 +168,11 @@ la graphe est ci-desous:
 
 ![](https://i.loli.net/2021/02/26/PGYVH4l5BtMWxQd.png)
 
-donc la preuve est vrais et on peut conclure $R_y =y(\tau)*y(\tau)(t)$ quad $RE_y paire \quad IM_y impare$
+donc la preuve est vrais et on peut conclure $R_y =y(\tau)*y(\tau)(t)$ quand $RE_y paire \quad IM_y impare$
 
 #### Exemple4:
 
-quand même on construite un cas contôle avec Exemple3:
+Quand même on construite un cas contôle avec Exemple3:
 
  $f(t)= sin(wt)+jrect_{8\pi/w}(t)\quad w=400\pi\quad t\in[-8\pi/w,8\pi/w]$
 
@@ -184,7 +184,7 @@ la graphe est ci-desous:
 
 ![](https://i.loli.net/2021/02/26/oTRjsqb7A2tSYwn.png)
 
-donc la preuve est vrais et on peut conclure $R_y =-y(\tau)*y(\tau)(t)$ quad $IM_y paire \quad RE_y impare$
+donc la preuve est vrais et on peut conclure $R_y =-y(\tau)*y(\tau)(t)$ quand $IM_y paire \quad RE_y impare$
 
 
 
@@ -221,7 +221,7 @@ R_{yx}(t) &=& (x(-\tau)*y(\tau)(t))=\int_{-\infty}^{+\infty}x(-\tau)y(t-\tau)d\t
 \end{eqnarray}
 $$
 
-si x(t) est complex et y(t) est  complex,
+si x(t) est complex et y(t) est complex,
 $$
 \begin{eqnarray}
 R_{xy}(t) & =& R_{Re_xRe_y}(t)+R_{Im_xIm_y}(t) + jR_{Im_xRe_y}(t)-jR_{Re_xIm_y}(t) \\
@@ -238,7 +238,7 @@ nous prenons 2 cas différentes pour vérifier ce résultat.
 
 #### Exemple1:
 
-nous prenons deux signales complex aléatoire,  comme  
+Nous prenons deux signaux complex aléatoires $f(t)$ et $g(t)$ 
 
 pour $w=400\pi\quad t\in[-8\pi/w,8\pi/w]$
 
@@ -251,11 +251,11 @@ alors nous vérifions $ R_{fg}(t)=R^*_{gf}(-t)$
 
 **image**:![](https://i.loli.net/2021/02/26/SHXRojOpsUlAJBy.png)
 
-nous voyons que ce graphe montre $R_{fg}(t)$est bien équale $R_{gf}(-t)$ des signales complexes. 
+Nous voyons que ce graphe montre $R_{fg}(t)$ est bien égal à $R_{gf}(-t)$ des signaux complexes. 
 
 #### Exemple2:
 
-pour exlure les imprévus: nous prenons un cas différent:
+Pour exclure les imprévus: nous prenons un cas différent:
 
 pour $w=400\pi\quad t\in[-8\pi/w,8\pi/w]$
 
@@ -265,11 +265,11 @@ $f=sinc(wt)+cos(wt)+j(cos(4wt)+cos(3wt)+sin(4wt))\quad g=cos(2wt)+sin(4wt)+j(cos
 
 **image**:![](https://i.loli.net/2021/02/26/O2bJgSkABHXd9Fq.png)
 
-Sans doute,$ R_{xy}(t)=R^*_{yx}(-t)$
+Sans doute $ R_{xy}(t)=R^*_{yx}(-t)$
 
 ## Conclusion 
 
-Dans cette projet, nous apprenons plein de choses, comment réaliser une projet en GIT, comment fait mieux de travaile en distance. je me profite de maîtriser la commande de matlab dans projet et mieux comprendre la corrélation et concolution des signales.  
+Dans ce projet, nous apprenons plein de choses. Nous nous profitons de maîtriser la commande de Matlab dans ce projet et mieux comprendre la corrélation et convolution des signaux. Par ailleur en ce moment particulièrement difficile à cause de covid-19, nous avons aussi su que comment réaliser un projet en GIT, comment faire mieux de travailer en distance. 
 
 
 
